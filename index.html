@@ -52,18 +52,18 @@
             <p class="sub-heading">we love music</p>
             <p class="about">We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             <!-- member 1 -->
-            <div class="member-list">
-               <div class="member-item">
+            <div class="row member-list">
+               <div class="col col-third center member-item">
                   <p class="member-name">Name</p>
                   <img src="./html_css/assets/img/slider/bandmember.jpg" alt="" class="member-img">
                </div>
                <!-- member 2 -->
-                  <div class="member-item">
+                  <div class="col col-third center member-item">
                      <p class="member-name">Name</p>
                      <img src="./html_css/assets/img/slider/bandmember.jpg" alt="" class="member-img">
                   </div>
                <!-- member 3 -->
-                  <div class="member-item">
+                  <div class="col col-third center member-item">
                      <p class="member-name">Name</p>
                      <img src="./html_css/assets/img/slider/bandmember.jpg" alt="" class="member-img">
                   </div>
@@ -85,38 +85,39 @@
                </ul>
 
                <!-- places -->
-                 <div class="place-list">
-                     <div class="place-item">
+                 <div class="row place-list">
+                     <div class="col col-third place-item">
                         <img src="./html_css/assets/img/slider/NewYork.jpg" alt="New York" class="place-img">
 
                         <div class="place-body">
                           <h3 class="place-heading">New York</h3> 
                           <p class="place-date">Fri 27 Nov 2016</p>
                           <p class="place-content">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                           <a href="#" class="place-ticket">Buy Tickets</a>
+                           <button class="place-ticket js-buy-ticket">Buy Tickets</button>
                         </div>
                      </div>
 
-                     <div class="place-item">
+                     <div class="col col-third place-item">
                         <img src="./html_css/assets/img/slider/paris.jpg" alt="New York" class="place-img">
 
                         <div class="place-body">
                           <h3 class="place-heading">Paris</h3> 
                           <p class="place-date">Sat 28 Nov 2016</p>
                           <p class="place-content">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                           <a href="#" class="place-ticket">Buy Tickets</a>
+                           <button class="place-ticket js-buy-ticket">Buy Tickets</button>
                         </div>
                      </div>
 
-                     <div class="place-item">
+                     <div class="col col-third place-item">
                         <img src="./html_css/assets/img/slider/sanfran.jpg" alt="New York" class="place-img">
 
                         <div class="place-body">
                           <h3 class="place-heading">San Francisco</h3> 
                           <p class="place-date">Sun 29 Nov 2016</p>
                           <p class="place-content">Praesent tincidunt sed tellus ut rutrum sed vitae justo</p>
-                           <a href="#" class="place-ticket">Buy Tickets</a>
+                           <button class="place-ticket js-buy-ticket">Buy Tickets</button>
                         </div>
+                        
                      </div>
 
                  </div>
@@ -126,7 +127,41 @@
 
          <div class="content-section">
             <h2 class="section-heading">Contact</h2>
-            <p class="sub-heading">Fan? Drop a note!  </p>  
+            <p class="sub-heading">Fan? Drop a note!  </p> 
+            
+            <div class="row contact-section">
+               <div class="col col-half">
+                  <p><i class="ti-location-pin"></i> Chicago, US</p>
+                  <p><i class="ti-mobile"></i> Phone: +00 151515</p>
+                  <p><i class="ti-email"></i> Email: mail@mail.com</p>
+               </div>
+
+               <div class="col col-half">
+                  <form action="">
+                    <div class="row">
+
+                     <div class="col col-half">
+                        <input type="text" name="" placeholder="Name" id="" class="form-control">
+                     </div>
+
+                     <div class="col col-half">
+                        <input type="email" name="" placeholder="Email" id="" class="form-control">
+                     </div>
+
+                    </div>
+
+                    <div class="row">
+
+                     <div class="col col-full">
+                        <input type="text" name="" placeholder="Message" id="" class="form-control">
+                     </div>
+                    </div> 
+                    <input type="submit" value="SEND">
+
+                  </form>
+               </div>
+            </div>
+
          </div>
 
 
@@ -136,8 +171,78 @@
       <div id="footer">
 
       </div>
-
+      
+      
    </div>
+   
+   <!-- Buy-ticket -->
+    <div class="modal js-modal">
+      <div class="modal-container js-modal-container">
+         <div class="modal-close-icon modal-close js-modal-close">
+            <i class="ti-close"></i>
+         </div>
+         <header class="modal-header">
+            <i class="ti-bag"></i>
+            Tickets
+         </header>
+         <div class="modal-body">
+
+            <!-- input how may  -->
+            <label for="amount" class="modal-label">
+                  <i class="ti-shopping-cart"></i>
+                  Tickets, $15 per person
+
+                  <input id="amount" type="text" class="modal-input" placeholder="How many?">
+            </label>
+
+            <!-- input email -->
+            <label for="email" class="modal-label">
+                  <i class="ti-user"></i>
+                  Send To
+                  <input id="email" class="modal-input" placeholder="Enter email">
+            </label>
+
+            <!-- pay button -->
+            <button id="modal-button">
+               PAY
+               <i class="ti-check"></i>
+            </button>
+         </div>
+         <footer class="modal-footer">Need <a href="">help?</a></footer>
+         
+
+      </div>
+    </div>
+
+    <script>
+      const buyBtns = document.querySelectorAll('.js-buy-ticket')
+      const modal = document.querySelector('.js-modal')
+      const modalContainer = document.querySelector('.js-modal-container')
+      const modalClose = document.querySelector('.js-modal-close')
+
+      function showBuyTickets(){
+         modal.classList.add('open')
+      }
+
+      function hideBuyTickets(){
+         modal.classList.remove('open')
+      }
+      function showContainer (event) {
+         event.stopPropagation()
+      }
+
+
+
+      for(const buyBtn of buyBtns){
+         buyBtn.addEventListener('click', showBuyTickets)
+
+    }
+         modalClose.addEventListener ('click', hideBuyTickets)
+         modal.addEventListener ('click', hideBuyTickets)
+         modalContainer.addEventListener('click', showContainer)
+         
+    </script>
+
 
 </body>
 </html>
