@@ -6,9 +6,31 @@
 
 }
 
+.btn{
+    display: inline-block;
+    background-color: #000;
+    color: #fff;
+    padding: 11px 16px;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+}
+
+.btn:hover{
+    color: #000;
+    background-color: #ccc;
+}
+
+.row::after{
+    content: "";
+    display: block;
+    clear:both;
+}
+
 .row{
     padding-left: -8px;
     padding-right: -8px;
+    width: 100%;
 }
 
 .col-half{
@@ -26,8 +48,20 @@
 
 .col{
     float: left;
-    padding-left: 8px;
-    padding-right: 8px;
+    /* padding-left: 8px;
+    padding-right: 8px; */
+}
+
+.mt-8{
+    margin-top: 8px !important;
+}
+
+.pull-right{
+    float: right;
+}
+
+.mt-16{
+    margin-top: 16px !important;
 }
 
 .clear{
@@ -136,12 +170,12 @@ html{
     position: relative;
     margin-top: 46px;
     padding-top: 50%;
-    background: url('/F8_band/html_css/assets/img/slider/slider-1.jpg   ') top center / cover no-repeat;
+    background: url('/html_css/assets/img/slider/slider-1.jpg') top center / cover no-repeat;
     border-style: none;
 }
 
 #content{
-    height: 1000px;
+    height: 100%;
 }
 
 #slider .text-content{
@@ -257,6 +291,11 @@ html{
     padding-top: 32px;
     margin-left: -8px;
     margin-right: -8px;
+    padding-bottom: 32px;
+}
+
+.place-item{
+    padding: 0px 8px;
 }
 
 
@@ -291,18 +330,7 @@ html{
     line-height: 1.4;
 }
 
-.place-ticket{
-    display: inline-block;
-    background-color: #000;
-    color: #fff;
-    padding: 11px 16px;
-    text-decoration: none;
-}
 
-.place-ticket:hover{
-    color: #000;
-    background-color: #ccc;
-}
 
 .modal{
     position: fixed;
@@ -386,7 +414,7 @@ input.modal-input {
     color: #000;
 }
 
-.modal-footer {
+.modal-foot {
     padding: 16px;
     text-align: right;
     
@@ -400,10 +428,65 @@ input.modal-input {
     display: flex;
 }
 
-.contact-section{
+.contact-content{
     padding: 35px 0;
+
 }
 
+.contact-info{
+    font-size: 18px;
+    line-height: 1.5;
+    
+}
+
+.contact-info i[class="ti-"] {
+    width: 30px;
+    display: inline-block;
+}
+
+.contact-form .form-control{
+    padding: 8px;
+    font-size: 15px;
+    width: 100%;
+    border: 1px solid #ccc;
+    
+}
+
+.map-section img{
+    width: 100%;
+    
+}
+
+#footer{
+    padding: 64px 16px;
+    text-align: center;
+}
+
+#footer .socail-icon{
+    font-size: 24px;
+}
+
+
+#footer .copyright{
+    font-size: 15px;
+    color: rgba(0,0,0,0.6);
+    margin: 15px 0px;
+}
+
+#footer .copyright a{
+    color: rgba(0,0,0,0.6);
+}
+
+
+
+#footer .socail-icon a{
+    color: rgba(0,0,0,0.6);
+    text-decoration: none;
+}
+
+#footer .socail-icon a:hover{
+    color: rgba(0,0,0,0.3);
+}
 
 @keyframes modalFadeIn{
     from{
@@ -416,4 +499,3 @@ input.modal-input {
         transform: translateY(0);
     }
 }
-
