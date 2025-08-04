@@ -1,0 +1,14 @@
+
+   /* Mobile */
+
+          @media (max-width: 740px)
+        {
+            #nav > li{
+                display: block; 
+
+            }
+
+            #header .Search-btn .search-icon{
+                display: none;
+            }
+        }
