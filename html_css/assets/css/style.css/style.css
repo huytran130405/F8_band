@@ -88,6 +88,8 @@ html{
     right: 0px;
     height: 46px;
     background-color: #000;
+    z-index: 1;
+    overflow: hidden;
 }
 
 #nav{
@@ -96,7 +98,7 @@ html{
 }
 
 
-#nav li{
+#nav > li{
     display: inline-block;
     position: relative;
 
@@ -135,6 +137,7 @@ html{
     min-width: 160px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0,0,0,0.33);
+    list-style: none;
 }
 
 
@@ -149,9 +152,19 @@ html{
     padding: 0px 12px;    
 }
 
+#header .Menu-btn,
 #header .Search-btn{
     float: right;
     padding: 0px 21px;
+}
+
+#header .Menu-btn:hover 
+{
+    background-color: #ccc;
+}
+
+#header .Menu-btn:hover .menu-icon{
+    color: #000;
 }
 
 #header .Search-btn:hover{
@@ -159,6 +172,9 @@ html{
     cursor: pointer;
 }
 
+
+
+#header .Menu-btn .menu-icon,
 #header .Search-btn .search-icon{
     color:#fff;
     font-size: 20px;
